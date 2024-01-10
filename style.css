@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6a3c8;
+  font-family: "Mali";
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+.btn {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  color: #a56086;
+  margin: 1rem;
+  padding: 20px 50px;
+  font-size: 2rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.8);
+  transform: translateY(4px);
+  box-shadow: 0 0 10px;
+}
