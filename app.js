@@ -1,12 +1,9 @@
-const audioElement = document.getElementById("OBISA!!!"); // Cache the audio element for direct access
+const audioElement = document.getElementById("OBISA!!!");
 
 function playAudio() {
-  audioElement.currentTime = 0; // Reset to the beginning for overlapping
+  audioElement.currentTime = 0;
   audioElement.play();
 }
 
-const button = document.createElement("button");
-button.textContent = "OBISA!!!";
+const button = document.getElementById("obisa-button"); // Target the specific button using its ID
 button.addEventListener("click", playAudio);
-
-document.getElementById("buttons").appendChild(button);
