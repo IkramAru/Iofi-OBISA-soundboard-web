@@ -1,16 +1,12 @@
-const sounds = ["OBISA!!!"];
+const audioElement = document.getElementById("OBISA!!!"); // Cache the audio element for direct access
 
-sounds.forEach((sound) => {
-  const btn = document.createElement("button");
-  btn.classList.add("btn");
+function playAudio() {
+  audioElement.currentTime = 0; // Reset to the beginning for overlapping
+  audioElement.play();
+}
 
-  btn.innerText = sound;
+const button = document.createElement("button");
+button.textContent = "OBISA!!!";
+button.addEventListener("click", playAudio);
 
-  btn.addEventListener("click", () => {
-    const audio = document.getElementById(sound);
-    audio.currentTime = 0;
-    audio.play();
-  });
-
-  document.getElementById("buttons").appendChild(btn);
-});
+document.getElementById("buttons").appendChild(button);
