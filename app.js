@@ -6,5 +6,11 @@ sounds.forEach((sound) => {
 
   btn.innerText = sound;
 
+  btn.addEventListener("click", () => {
+    const audio = document.getElementById(sound);
+    audio.currentTime = 0;
+    audio.play();
+  });
+
   document.getElementById("buttons").appendChild(btn);
 });
