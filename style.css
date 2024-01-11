@@ -82,3 +82,20 @@ hr {
   transform: translateY(4px);
   box-shadow: 0 0 10px;
 }
+
+footer {
+  background-color: white;
+  color: black;
+  padding: 16px 10vw;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-left: 6px;
+}
