@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #e6a3c8;
+  background-color: #e48fbe;
   font-family: "Mali";
   flex-wrap: wrap;
   align-items: center;
@@ -15,6 +15,13 @@ body {
   overflow: hidden;
   margin: 0;
   color: white;
+}
+
+.counter {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 h1 {
@@ -41,16 +48,27 @@ hr {
   margin-bottom: 10px;
 }
 
+.iofipic {
+  display: inline-block;
+  text-align: center;
+}
+
+.iofipic img {
+  width: 200px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Optional spacing around the image */
+}
+
 #obisa-button {
   background-color: #ffffff;
   border-radius: 5px;
   border: none;
-  color: #a56086;
+  color: #e48fbe;
   margin: 1rem;
   padding: 20px 50px;
   font-size: 2rem;
   font-family: inherit;
-  font-weight: bold;
+  font-weight: bolder;
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
