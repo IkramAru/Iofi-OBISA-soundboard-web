@@ -5,14 +5,13 @@
 }
 
 body {
-  background-color: #e48fbe;
+  background-color: #eea8cf;
   font-family: "Mali";
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   height: 100vh;
   text-align: center;
-  overflow: hidden;
   margin: 0;
   color: white;
 }
@@ -83,14 +82,32 @@ hr {
   box-shadow: 0 0 10px;
 }
 
-footer {
+#footer {
   background-color: white;
   color: black;
-  padding: 16px 10vw;
+  padding: 2em;
   display: flex;
   gap: 16px;
   align-items: center;
   justify-content: center;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: bolder;
+  
+}
+
+.footer-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2em;    
+}
+
+#yt-footer-icon {
+  color: #f01d1d;
+}
+
+#github-footer-icon {
+  color: #000000;
 }
 
 .footer-icon-text {
@@ -98,4 +115,12 @@ footer {
   vertical-align: middle;
   font-weight: bold;
   margin-left: 6px;
+}
+
+#footer-text-container {
+  display: inline-flex;
+}
+
+#footer-text {
+  margin: 0 10px;
 }
