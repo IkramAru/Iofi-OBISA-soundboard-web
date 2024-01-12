@@ -1,11 +1,7 @@
 const audioElement = document.getElementById("OBISA!!!");
-
 const button = document.getElementById("obisa-button");
-button.addEventListener("click", playAudio);
-
-// Button press counter code
 const countElement = document.getElementById("count");
-id = "count";
+
 let count = 0;
 
 if (typeof Storage !== "undefined") {
