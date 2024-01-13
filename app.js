@@ -18,7 +18,6 @@ button.addEventListener("click", () => {
   countElement.textContent = `You have OBISA'd ${count} times.`;
   playAudio();
 
-  // Image swapping with jumping effect
   if (mainImage.src.includes("picture-A")) {
     mainImage.src = "/pic/yopi-chibi-2.png";
     mainImage.style.transform = "translateY(-30px)";
