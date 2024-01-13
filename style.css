@@ -43,12 +43,17 @@ hr {
 .iofipic {
   display: inline-block;
   text-align: center;
+  position: relative;
 }
 
 .iofipic img {
-  width: 200px; /* Adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin: 10px; /* Optional spacing around the image */
+  width: 300px;
+  height: auto;
+  margin: 10px;
+}
+
+#yopi{
+  transition: transform 0.3s ease-in-out;
 }
 
 .counter {
