@@ -5,8 +5,6 @@ const mainImage = document.getElementById("yopi");
 
 let count = 0;
 
-// Removed the isOriginalImage flag, as it's not needed for continuous image swapping
-
 if (typeof Storage !== "undefined") {
   if (localStorage.clickcount) {
     count = Number(localStorage.clickcount);
@@ -21,17 +19,21 @@ button.addEventListener("click", () => {
   playAudio();
 
   // Image swapping logic within the click event listener
-  if (mainImage.src.includes("/pic/yopi-chibi-2.png")) { // Use string comparison to determine current image
-    mainImage.src = "/pic/yopi-chibi.png"; // Change to original image
+  if (mainImage.src.includes("/pic/yopi-chibi-2.png")) {
+    mainImage.src = "/pic/yopi-chibi.png";
   } else {
-    mainImage.src = "/pic/yopi-chibi-2.png"; // Change to alternative image
+    mainImage.src = "/pic/yopi-chibi-2.png";
   }
 
-  // Transition effect for a smoother visual experience
+  // Temporary image swap with transition and delay
+  const originalSrc = mainImage.src; // Store original image URL
+  mainImage.src = "/pic/yopi-chibi-2.png"; // Replace with alternative image
   mainImage.style.transition = "transform 0.3s ease-in-out";
   mainImage.style.transform = "translateY(-30px)";
+
   setTimeout(() => {
     mainImage.style.transform = "translateY(0)";
+    mainImage.src = originalSrc; // Revert to original image after delay
   }, 300);
 });
 
@@ -39,3 +41,19 @@ function playAudio() {
   audioElement.currentTime = 0;
   audioElement.play();
 }
+
+// Idle animation function
+function idleAnimation() {
+  mainImage.style.transition = "transform 1s ease-in-out";
+  mainImage.style.transform = "rotate(-5deg)";
+
+  setTimeout(() => {
+    mainImage.style.transform = "rotate(5deg)";
+  }, 500);
+
+  setTimeout(() => {
+    idleAnimation();
+  }, 1000);
+}
+
+idleAnimation(); // Start the idle animation
