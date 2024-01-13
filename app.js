@@ -5,6 +5,8 @@ const mainImage = document.getElementById("yopi");
 
 let count = 0;
 
+// Removed the isOriginalImage flag, as it's not needed for continuous image swapping
+
 if (typeof Storage !== "undefined") {
   if (localStorage.clickcount) {
     count = Number(localStorage.clickcount);
@@ -18,19 +20,19 @@ button.addEventListener("click", () => {
   countElement.textContent = `You have OBISA'd ${count} times.`;
   playAudio();
 
-  if (mainImage.src.includes("picture-A")) {
-    mainImage.src = "/pic/yopi-chibi-2.png";
-    mainImage.style.transform = "translateY(-30px)";
-    setTimeout(() => {
-      mainImage.style.transform = "translateY(0)";
-    }, 200);
+  // Image swapping logic within the click event listener
+  if (mainImage.src.includes("/pic/yopi-chibi-2.png")) { // Use string comparison to determine current image
+    mainImage.src = "/pic/yopi-chibi.png"; // Change to original image
   } else {
-    mainImage.src = "/pic/yopi-chibi.png";
-    mainImage.style.transform = "translateY(-30px)";
-    setTimeout(() => {
-      mainImage.style.transform = "translateY(0)";
-    }, 200);
+    mainImage.src = "/pic/yopi-chibi-2.png"; // Change to alternative image
   }
+
+  // Transition effect for a smoother visual experience
+  mainImage.style.transition = "transform 0.3s ease-in-out";
+  mainImage.style.transform = "translateY(-30px)";
+  setTimeout(() => {
+    mainImage.style.transform = "translateY(0)";
+  }, 300);
 });
 
 function playAudio() {
