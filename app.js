@@ -3,6 +3,8 @@ const button = document.getElementById("obisa-button");
 const countElement = document.getElementById("count");
 const mainImage = document.getElementById("yopi");
 
+const danmakuContainer = document.getElementById("danmakuContainer");
+
 let count = 0;
 let originalImageSrc = mainImage.src;
 
@@ -19,6 +21,18 @@ button.addEventListener("click", () => {
   countElement.textContent = `You have OBISA'd ${count} times.`;
   playAudio();
 
+  toggleImage(); 
+
+  const danmaku = spawnDanmaku();
+  removeDanmaku(danmaku);
+});
+
+function playAudio() {
+  audioElement.currentTime = 0;
+  audioElement.play();
+}
+
+function toggleImage() {
   if (mainImage.src.includes("/pic/yopi-chibi-2.gif")) {
     mainImage.src = "/pic/yopi-chibi.gif";
   } else {
@@ -30,9 +44,4 @@ button.addEventListener("click", () => {
   setTimeout(() => {
     mainImage.style.transform = "translateY(0)";
   }, 300);
-});
-
-function playAudio() {
-  audioElement.currentTime = 0;
-  audioElement.play();
 }
