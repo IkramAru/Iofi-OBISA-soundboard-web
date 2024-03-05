@@ -1,9 +1,11 @@
+import { spawnDanmaku } from './danmaku.js';
+
 const audioElement = document.getElementById("OBISA!!!");
 const button = document.getElementById("obisa-button");
 const countElement = document.getElementById("count");
 const mainImage = document.getElementById("yopi");
 
-const danmakuContainer = document.getElementById("danmakuContainer");
+const danmakuElements = [];
 
 let count = 0;
 let originalImageSrc = mainImage.src;
@@ -21,18 +23,6 @@ button.addEventListener("click", () => {
   countElement.textContent = `You have OBISA'd ${count} times.`;
   playAudio();
 
-  toggleImage(); 
-
-  const danmaku = spawnDanmaku();
-  removeDanmaku(danmaku);
-});
-
-function playAudio() {
-  audioElement.currentTime = 0;
-  audioElement.play();
-}
-
-function toggleImage() {
   if (mainImage.src.includes("/pic/yopi-chibi-2.gif")) {
     mainImage.src = "/pic/yopi-chibi.gif";
   } else {
@@ -43,5 +33,16 @@ function toggleImage() {
   mainImage.style.transform = "translateY(-30px)";
   setTimeout(() => {
     mainImage.style.transform = "translateY(0)";
-  }, 300);
+  }, 300)
+  spawnDanmaku(danmakuElements, "OOOBISA!!!");
+});
+
+function playAudio() {
+  audioElement.currentTime = 0;
+  audioElement.play();
+}
+
+function removeDanmaku(element) {
+  element.parentNode.removeChild(element);
+  danmakuElements.splice(danmakuElements.indexOf(element), 1);
 }
