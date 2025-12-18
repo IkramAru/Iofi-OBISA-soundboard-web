@@ -20,9 +20,9 @@ button.addEventListener("click", () => {
   playAudio();
 
   if (mainImage.src.includes("/pic/yopi-chibi-2.gif")) {
-    mainImage.src = "/pic/yopi-chibi.gif";
+    mainImage.src = "./pic/yopi-chibi.gif";
   } else {
-    mainImage.src = "/pic/yopi-chibi-2.gif";
+    mainImage.src = "./pic/yopi-chibi-2.gif";
   }
 
   mainImage.style.transition = "transform 0.3s ease-in-out";
