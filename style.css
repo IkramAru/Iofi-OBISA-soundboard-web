@@ -115,7 +115,7 @@ hr {
   padding: 2em;
   display: flex;
   gap: 16px;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   font-size: 1.5rem;
   font-family: inherit;
@@ -140,15 +140,33 @@ hr {
   display: inline-block;
   vertical-align: middle;
   font-weight: bold;
-  margin-left: 6px;
 }
 
 #footer-text-container {
   display: inline-flex;
 }
 
-#footer-text {
+.footer-section {
   margin: 0 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section p:first-child {
+  min-height: 3rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.footer-section a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 a {
