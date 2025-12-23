@@ -4,16 +4,31 @@
   box-sizing: border-box;
 }
 
+
+html {
+  background-color: white;
+}
+
 body {
-  background-color: #eea8cf;
+  background-color: white; 
   font-family: "Mali";
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   color: white;
+}
+
+main {
+  background-color: #eea8cf;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 h1 {
@@ -48,11 +63,12 @@ hr {
 
 .iofipic img {
   width: 300px;
-  height: auto;
+  height: 300px;
+  object-fit: contain;
   margin: 10px;
 }
 
-#yopi{
+#yopi {
   transition: transform 0.3s ease-in-out;
 }
 
