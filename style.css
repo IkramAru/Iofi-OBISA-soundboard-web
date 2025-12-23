@@ -148,3 +148,26 @@ hr {
 a {
   text-decoration: none
 }
+
+/* NicoNico Style Flying Text */
+.flying-text {
+  position: fixed;
+  white-space: nowrap;
+  pointer-events: none; /* So it doesn't block clicks */
+  color: #ffffff; /* White text as requested */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -1px -1px 0 #eea8cf, 1px -1px 0 #eea8cf, -1px 1px 0 #eea8cf, 1px 1px 0 #eea8cf; /* Shadow and outline for visibility */
+  font-family: "Mali", "sans-serif";
+  font-weight: bold;
+  z-index: 9999;
+  left: -20%; /* Start off-screen left */
+  animation: scrollText 5s linear forwards;
+}
+
+@keyframes scrollText {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 120%;
+  }
+}
