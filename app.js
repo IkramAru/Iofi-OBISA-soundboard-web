@@ -34,8 +34,8 @@ button.addEventListener("click", () => {
 });
 
 function playAudio() {
-  audioElement.currentTime = 0;
-  audioElement.play();
+  const sound = audioElement.cloneNode();
+  sound.play();
 }
 
 function SpawnChat() {
