@@ -41,8 +41,8 @@ function playAudio() {
 function SpawnChat() {
   const chat = document.createElement("div");
   
-  // 0.01% chance (1 in 10,000) for easter egg idk lol
-  if (Math.random() < 0.0001) {
+  // 0.01% chance (1 in 100) for easter egg idk lol
+  if (Math.random() < 0.01) {
     chat.innerText = "yopi pendek wkwkwk";
   } else {
     const textOptions = ["OBISA!", "OBISA!", "O O O BISA!", "Obisa!", "obisa!"];
