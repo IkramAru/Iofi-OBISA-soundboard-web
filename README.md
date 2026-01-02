@@ -1,7 +1,7 @@
 <div align="center"><img src="pic/obisa-logo.png" width="400"></div>
 
 ## Try it here!
-# https://ikramaru.github.io/Iofi-OBISA-soundboard-web/
+# https://obisa-soundboard.netlify.app/
 
 The soundboard website for the hit popular vtuber from Hololive Indonesia made by Cover Corp, Airani Iofifteen (my beloved oshi fr fr)
 
